@@ -19,7 +19,10 @@ const Insurance = db.define('Insurance_Details', {
         type: Sequelize.CHAR
     },
     Premium: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        validate: {
+            max: 1000000
+        }
     },
     Bodily_Injury_Liability: {
         type: Sequelize.CHAR
